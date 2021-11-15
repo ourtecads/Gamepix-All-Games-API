@@ -20,7 +20,7 @@ $get_game = json_decode($gamepix_url, true); //decode json url
                   </tr>
                 </thead>
                 <tbody>
-                <?php foreach(array_slice($get_game['data']) as $result): ?>    //foreach array
+                <?php foreach($get_game['data'] as $result): ?>    //foreach array
                   <tr>
                     <td><img src="<?= $result['thumbnailUrl100']; ?>" width="50" alt="<?= $result['title']; ?>"/></td>
                     <td><b><?= $result['title']; ?></b></td>
